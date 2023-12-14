@@ -1,6 +1,6 @@
 {% set name = "libcufft" %}
-{% set version = "11.0.0.21" %}
-{% set cuda_version = "12.0" %}
+{% set version = "11.0.2.54" %}
+{% set cuda_version = "12.1" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -18,13 +18,13 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 4650f79fcf377af410afedb56445f1332e8f213ec3c94d660f9a91328c3ecb4a  # [linux64]
-  sha256: e711671995e9d92d16015a4cd3751ec30710a49fa22f2b88a4a42905c248d861  # [ppc64le]
-  sha256: 91aa1ba5e68ca65778222c9a427a9214c4550d2f45e978e51779a207bafc17a3  # [aarch64]
-  sha256: a33f577d48ef432d5cfa8d0ebfa789cc5261af5dd84fd9c608235edc3f769e43  # [win]
+  sha256: 7136c1d42c7d1fbc29db2f401c8d5f169d4b81cff4d017946d3e6f45077e7b14  # [linux64]
+  sha256: 2c7c8c5950de601f400d916095248683401c6d26a3e81497d0db0d129ba6730a  # [ppc64le]
+  sha256: 138ad4dc1d0895a8bf8ed6b32b204dcbda176397a23a044ec76a6785c7452fa4  # [aarch64]
+  sha256: 87cd7a4453a873d011210075bfedf76397ca08f29237354277b07076a9e057b3  # [win]
 
 build:
-  number: 2
+  number: 0
   binary_relocation: false
   skip: true  # [osx]
 
@@ -177,6 +177,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - adibbley
-    - jakirkham
-    - seberg
+    - conda-forge/cuda
