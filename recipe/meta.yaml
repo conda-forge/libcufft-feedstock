@@ -24,7 +24,7 @@ source:
   sha256: df1594afd3de4e23779511eb8eccc1f77faacd9fa64e6154828b9bdd68d9a785  # [win]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   skip: true  # [osx]
 
