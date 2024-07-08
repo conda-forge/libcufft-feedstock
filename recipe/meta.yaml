@@ -1,5 +1,5 @@
 {% set name = "libcufft" %}
-{% set version = "11.2.3.18" %}
+{% set version = "11.2.3.61" %}
 {% set cuda_version = "12.5" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
@@ -18,9 +18,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 46fae345f6c733431d5b660afa34546df552fa6f6d9ccf015f4372048e0090af  # [linux64]
-  sha256: 61034f4f9786f866b41162d8a6c2c9449fca9be799f3370c47631aab11762d93  # [aarch64]
-  sha256: c06f0d02d50a53f06094f2c6fac40f5c2a565c5dc45820ef36f7e33b958e7ddb  # [win]
+  sha256: c69cc32712f2396aaf497894945572e8c3e2668b89614e1a56c2d8e3cece4e54  # [linux64]
+  sha256: 50831766eb16a52a803484e746197d604e5e5181fdadbc0fbfaf90ff90e6b18f  # [aarch64]
+  sha256: afe77d89bce4ee669516597bfb635adddc156988409ee2e220f7b492fe81201e  # [win]
 
 build:
   number: 0
