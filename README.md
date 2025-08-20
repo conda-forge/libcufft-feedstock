@@ -72,14 +72,14 @@ Current release info
 Installing libcufft-split
 =========================
 
-Installing `libcufft-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libcufft-split` from the `conda-forge/label/cuda130_dev` channel can be achieved by adding `conda-forge/label/cuda130_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/cuda130_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libcufft, libcufft-dev, libcufft-static` can be installed with `conda`:
+Once the `conda-forge/label/cuda130_dev` channel has been enabled, `libcufft, libcufft-dev, libcufft-static` can be installed with `conda`:
 
 ```
 conda install libcufft libcufft-dev libcufft-static
@@ -94,26 +94,26 @@ mamba install libcufft libcufft-dev libcufft-static
 It is possible to list all of the versions of `libcufft` available on your platform with `conda`:
 
 ```
-conda search libcufft --channel conda-forge
+conda search libcufft --channel conda-forge/label/cuda130_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search libcufft --channel conda-forge
+mamba search libcufft --channel conda-forge/label/cuda130_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libcufft --channel conda-forge
+mamba repoquery search libcufft --channel conda-forge/label/cuda130_dev
 
 # List packages depending on `libcufft`:
-mamba repoquery whoneeds libcufft --channel conda-forge
+mamba repoquery whoneeds libcufft --channel conda-forge/label/cuda130_dev
 
 # List dependencies of `libcufft`:
-mamba repoquery depends libcufft --channel conda-forge
+mamba repoquery depends libcufft --channel conda-forge/label/cuda130_dev
 ```
 
 
