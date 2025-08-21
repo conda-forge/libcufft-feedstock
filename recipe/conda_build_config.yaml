@@ -1,2 +1,4 @@
 arm_variant_type:  # [aarch64]
   - sbsa           # [aarch64]
+channel_targets:
+  - conda-forge cuda130_dev
