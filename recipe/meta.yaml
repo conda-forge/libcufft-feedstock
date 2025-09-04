@@ -1,5 +1,5 @@
 {% set name = "libcufft" %}
-{% set version = "12.0.0.15" %}
+{% set version = "12.0.0.61" %}
 {% set cuda_version = "13.0" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
@@ -18,9 +18,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: adf4a9c89f32a149b76d3db77589d89f75f9b009840b8b5d5c4baa20d71c6798  # [linux64]
-  sha256: 0405aad71ec14eaa42b7b270ef7f020d83b79959670f515b70e600df9ddd7c8f  # [aarch64]
-  sha256: 4f0e0c019e1b53166bdeaf52c91c333450ae9dd05fbadc77cffb70a702501b67  # [win]
+  sha256: 5cdef1238c270f8f148da18587fdba8b9478c596e40f5490bba2b15c94915dd9  # [linux64]
+  sha256: 5361f3b22a50923204e07f7ff601150dc67aab6b0fff26c47bd3ac0a50c921a0  # [aarch64]
+  sha256: 4f2695ea50f895618316ee32636f5d0e5e0bc330e74b3e0876bff002af9e1eb3  # [win]
 
 build:
   number: 0
@@ -37,7 +37,7 @@ outputs:
     files:
       - lib/libcufft*.so.*                            # [linux]
       - targets/{{ target_name }}/lib/libcufft*.so.*  # [linux]
-      - Library\bin\{{ target_name }}\cufft*64_*.dll                    # [win]
+      - Library\bin\cufft*64_*.dll                    # [win]
     requirements:
       build:
         - {{ compiler("c") }}
@@ -65,8 +65,8 @@ outputs:
         - test -f $PREFIX/targets/{{ target_name }}/lib/libcufft.so.{{ version }}                 # [linux]
         - test -f $PREFIX/targets/{{ target_name }}/lib/libcufftw.so.{{ version }}                # [linux]
         - bash test-rpath.sh                                                                      # [linux]
-        - if not exist %LIBRARY_BIN%\{{ target_name }}\cufft64_{{ version.split(".")[0] }}.dll exit 1               # [win]
-        - if not exist %LIBRARY_BIN%\{{ target_name }}\cufftw64_{{ version.split(".")[0] }}.dll exit 1              # [win]
+        - if not exist %LIBRARY_BIN%\cufft64_{{ version.split(".")[0] }}.dll exit 1               # [win]
+        - if not exist %LIBRARY_BIN%\cufftw64_{{ version.split(".")[0] }}.dll exit 1              # [win]
     about:
       home: https://developer.nvidia.com/cufft
       license: LicenseRef-NVIDIA-End-User-License-Agreement
