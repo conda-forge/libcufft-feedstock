@@ -39,10 +39,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_arm_variant_typesbsac_stdlib_version2.28</td>
+              <td>linux_aarch64_arm_variant_typesbsac_stdlib_version2.17</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19107&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libcufft-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arm_variant_typesbsac_stdlib_version2.28" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libcufft-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_arm_variant_typesbsac_stdlib_version2.17" alt="variant">
                 </a>
               </td>
             </tr><tr>
